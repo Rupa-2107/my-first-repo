@@ -1,0 +1,7 @@
+name = "RUPA"
+course = "Python Programming"
+github_learning = "I learned that GitHub allows version control and collaboration using Git."
+
+print("Name:", name)
+print("Course:", course)
+print("One thing I learned about GitHub:", github_learning)
