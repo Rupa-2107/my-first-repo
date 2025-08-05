@@ -1,0 +1,39 @@
+# Student Portal Application with Basic Student Info
+
+students = {}
+
+def register_student():
+    print("\n--- Student Registration ---")
+    suc_no = input("Enter SUC Number (Student ID): ")
+    
+    if suc_no in students:
+        print("SUC Number already exists! Please log in.")
+        return
+
+    name = input("Enter Full Name: ")
+    course = input("Enter Course: ")
+    college = input("Enter College Name: ")
+    email = input("Enter Email: ")
+    phone = input("Enter Phone Number: ")
+
+    students[suc_no] = {
+        'name': name,
+        'course': course,
+        'college': college,
+        'email': email,
+        'phone': phone
+    }
+
+    print("Student registered successfully!")
+
+def view_student():
+    print("\n--- View Student Details ---")
+    suc_no = input("Enter SUC Number to search: ")
+    student = students.get(suc_no)
+
+    if student:
+        print(f"\n--- Profile for {suc_no} ---")
+        print("Name    :", student['name'])
+        print("Course  :", student['course'])
+        print("College :", student['college'])
+        print("Email
